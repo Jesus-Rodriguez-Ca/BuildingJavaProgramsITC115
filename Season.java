@@ -15,24 +15,36 @@
 public class Season {
 
 	public static void main(String[] args) {
-		season(1, 16);
+		season(1, 16);		//Calls the method season
 		
 	}
 	
-	public static void season(int month , int day) {
-		String months[] = {" ","January", "February","March","April", "May", "June", "July", "August", 
-				"September","October", "November", "December"};  
-		if(month < 3 || (month ==3 && day <=15) || (month == 12 && day >= 16) ) {
+	public static void season(int month , int day) { // The method contains two parameter representing months and days
+		
+		String months[] = {" ","January", "February","March",  // An array containing the months of the year
+				"April", "May", "June", "July", "August", 	   // It contains an empty space so the number enter	
+				"September","October", "November", "December"}; // matches with month 
+		
+		if(month < 3 || (month ==3 && day <=15) || (month == 12 && day >= 16) ) { // conditions to print Winter
 			
+			//It uses the array months and the parameter month to print the corresponding month.
 			System.out.print( months[month] + " " + day + " the season of the year is : Winter");
 		}
+		
+		// conditions to print Spring
 		else if( month < 6 || (month == 6 && day <= 15) || (month == 3 && day >= 16 )) {
-			System.out.print( months[month] + " " + day + " the season of the year is: Spring");
+			System.out.print( months[month] + " " + day + " the season of the year is: Spring"); 
 		}
+		
+		
+		// conditions to print Summer
 		else if ( month < 9 || (month ==9 && day <= 15) || (month == 6 && day >=16 )) {
 			System.out.print( months[month] +" " + day + " the season of the year is: Summer");
 		}
-		else {
+		
+		
+		//if none of the conditions are true Fall will be printed.
+		else {											
 			System.out.print( months[month] + " " + day + " the season of the year is: Fall");
 		}
 		
