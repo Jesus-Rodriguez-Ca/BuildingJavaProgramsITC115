@@ -18,29 +18,32 @@ Jordan's grade is 72.25*/
 import java.util.*;
 public class Gpa {
 	 public static void main(String[] args){
-	        printGpa();
+	        printGpa();  // Call the method printGpa
 	    }
 	    public static void printGpa(){
 	    	System.out.print("This program will give you your grade.");
 	    	System.out.println();
-	        Scanner console = new Scanner(System.in);
+	        Scanner console = new Scanner(System.in); // Call to library so the user can enter an input. 
 	        
 	        System.out.print("Enter your name: ");
-	        String name = console.nextLine();
-	        
+	        String name = console.nextLine();		  //The input by the user is saved in the variable name
+	        										  // It asks for the user name
 	        System.out.println();
 	        
 	        System.out.print("Enter number of grades that you have to calculate: ");
-	        int scores = console.nextInt();
-	        int grade = 0;
-	        for (int i = 1 ; i <= scores; i++) {
+	        int scores = console.nextInt();				//It asks for the amount of grades that the user wants to enter
+	        int grade = 0;								
+	        for (int i = 1 ; i <= scores; i++) {	//Loop to enter the grades 
 	            System.out.print(i + " : "  );
 	            int next  = console.nextInt();
-	            grade = grade + next;
+	            grade = grade + next; 				// The variable grade sums all the values enter by the user
 	    }
 	        console.close();
 	        System.out.println();
 	        
-	        System.out.format(name + "'s " + "grade is : " + (double)grade / scores);
+	      //Prints the name and the sum of all the values enter by the user and divides by amount of grades the 
+	      // the user entered, so the average of the grades can be printed.  
+	        System.out.format(name + "'s " + "grade is : " + (double)grade / scores); 
+	        
 }
 }
