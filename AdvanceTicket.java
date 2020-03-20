@@ -2,13 +2,18 @@ package inheritance;
 
 import java.text.NumberFormat;
 
+ 	// Creates an object Advance ticket its parent 
 public class AdvanceTicket extends Ticket{
-	private int days;
+	// Declares field days as private
+	private int days; 
+	
+	// Get number of ticket and the day that the ticket was bought
 	public AdvanceTicket(int ticketNumber,int days) {
 		   
         super(ticketNumber);
         this.days = days;
     } 
+	// Condition to know what the price of the ticket will be
     public double getPrice() {
    
         if(days>=10)
@@ -16,6 +21,8 @@ public class AdvanceTicket extends Ticket{
         else
         return 40;
     }
+    
+    // Returns number of the ticket and its cost
     public String toString() {
         return "Ticket # : " + getNumber() +" costs " + NumberFormat.getCurrencyInstance().format(getPrice());
     }
